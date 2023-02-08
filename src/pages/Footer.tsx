@@ -1,8 +1,8 @@
 import React from "react";
 function Footer() {
   return (
-    <div>
-      <h2> This is the about footer page </h2>
+    <div className="container">
+      <h2 className="page-title"> This is the Footer page </h2>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
-import Home from "./pages/Home";
+import Nav from "./pages/Nav";
 
 function App() {
-  return <Home />;
+  return <Nav />;
 }
 
 export default App;

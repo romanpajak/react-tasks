@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Footer from "./pages/Footer";
 import Details from "./pages/Details";
+import UserPage from "./pages/UserPage";
+import { router } from "./router/router";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -17,9 +19,11 @@ root.render(
     <App />
     <Routes>
       <Route index element={<Home />} />
-      <Route path="about" element={<About />} />
-      <Route path="footer" element={<Footer />} />
-      <Route path="details" element={<Details />} />
+      <Route path={router.home} element={<Home />} />
+      <Route path={router.about} element={<About />} />
+      <Route path={router.footer} element={<Footer />} />
+      <Route path={router.details} element={<Details />} />
+      <Route path="/user/:userId" element={<UserPage userId={1} />} />
     </Routes>
   </BrowserRouter>
 );
