@@ -6,7 +6,7 @@ function Details() {
   let userList = users.map((item) => {
     return (
       <p>
-        <Link to={`user${item.id}`}>{item.user}</Link>
+        <Link to={`user/${item.id}`}>{item.user}</Link>
       </p>
     );
   });

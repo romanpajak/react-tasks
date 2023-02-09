@@ -3,17 +3,23 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Footer from "./pages/Footer";
 import Details from "./pages/Details";
 import UserPage from "./pages/UserPage";
 import { router } from "./router/router";
+import Temp from "./pages/Temp";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+function ProfilePage() {
+  // Get the userId param from the URL.
+  let { userId } = useParams();
+  // ...
+}
 root.render(
   <BrowserRouter>
     <App />
@@ -23,7 +29,8 @@ root.render(
       <Route path={router.about} element={<About />} />
       <Route path={router.footer} element={<Footer />} />
       <Route path={router.details} element={<Details />} />
-      <Route path="/user/:userId" element={<UserPage userId={1} />} />
+      {/* <Route path="user" element={<UserPage/>} /> */}
+      <Route path="user/:userId" element={<UserPage />} />
     </Routes>
   </BrowserRouter>
 );
