@@ -6,13 +6,13 @@ function UserPage() {
   let { userId } = useParams();
   let userName;
   if (userId) {
-    userName = users[parseInt(userId)];
+    userName = users[parseInt(userId) - 1].user;
   }
 
   return (
-    <>
-      <p>User name:{userName}</p>
-    </>
+    <div className="container">
+      <p>User name: {userName}</p>
+    </div>
   );
 }
 

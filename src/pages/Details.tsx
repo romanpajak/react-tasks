@@ -1,7 +1,6 @@
 import React from "react";
 import { users } from "../users/users";
 import { Link } from "react-router-dom";
-import UserPage from "./UserPage";
 function Details() {
   let userList = users.map((item) => {
     return (
